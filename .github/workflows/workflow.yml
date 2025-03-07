@@ -1,0 +1,19 @@
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deployment environment"
+        required: true
+        type: choice
+        options:
+          - dev
+          - stage
+          - prod
+      live_module_name:
+        description: "Terraform Live module name"
+        required: true
+        type: choice
+        options:
+          - feedcat
+          - mysql
+          - all
